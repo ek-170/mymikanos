@@ -1,5 +1,13 @@
 # mikanos
 
+
+## how to build with EDK2
+
+```shell
+cd $HOME/edk2
+source edksetup.sh && build
+```
+
 ## how to create bootable USB
 
 ```shell
@@ -14,6 +22,7 @@ diskutil list
 # USB を初期化
 diskutil eraseDisk FAT32 BOOT GPT /dev/disk4
 mkdir -p /Volumes/BOOT/EFI/BOOT
+# もしファイル名が BOOTX64.EFIでない場合はリネームする
 cp BOOTX64.EFI /Volumes/BOOT/EFI/BOOT/
 
 # キャッシュをUSBに確実に書き込む
