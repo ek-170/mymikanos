@@ -24,6 +24,7 @@ diskutil eraseDisk FAT32 BOOT GPT /dev/disk4
 mkdir -p /Volumes/BOOT/EFI/BOOT
 # もしファイル名が BOOTX64.EFIでない場合はリネームする
 cp BOOTX64.EFI /Volumes/BOOT/EFI/BOOT/
+cp ./kernel/kernel.elf /Volumes/BOOT
 
 # キャッシュをUSBに確実に書き込む
 sync
